@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — Facundo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav-row">
+      <div class="brand">
+        <div class="logo"><img src="./multimedia/img/avatar.jpg" alt="logo" /></div>
+        <div>
+          <div style="font-size:14px;">Facundo De león</div>
+          <div style="font-size:12px;color:var(--muted);">Diseño & Desarrollo web</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul id="navList">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto" class="cta">Contactame</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="inicio" class="hero fade-in">
+      <div class="hero-card">
+        <div class="eyebrow">Desarrollador · Diseñador</div>
+        <h1>Hola — soy Facundo De León.</h1>
+        <p class="lead">Construyo experiencias digitales limpias y con impacto. Especializado en interfaces, rendimiento
+          y productos listos para producción.</p>
+        <div class="actions">
+          <a class="cta" href="#contacto">Contratar</a>
+          <a class="btn-secundario" href="#proyectos">Ver proyectos</a>
+        </div>
+      </div>
+
+      <aside class="profile-tile">
+        <div class="avatar"><img src="./multimedia/img/logo.jpg" alt="avatar" /></div>
+        <div class="mini-stats">
+          <div class="stat"><b>8+</b><span>Años</span></div>
+          <div class="stat"><b>60+</b><span>Proyectos</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="fade-in">
+      <div class="section-title">
+        <h2>Proyectos</h2><br>
+        <div class="section-sub">Selección de trabajos recientes</div><br>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <img src="./multimedia/img/proyecto1.png" alt="Portafolio Retro-Tech" class="project-image">
+          <h3>Portafolio Estilo retro-tech</h3> <br>
+          <p>Diseño inspirado en entornos Linux y terminal, con estilo retro-futurista y visualización de datos. Explora
+            mis proyectos, habilidades y servicios.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto2.png" alt="Landing Page" class="project-image" />
+
+          <h3>Landing Page</h3> <br>
+          <p>Diseñé una landing page moderna y funcional para devices_f2, un servicio especializado en soporte técnico y
+            reparación de computadoras.Enfocando la experiencia en la conversión mediante un diseño atractivo y
+            llamadas a la acción directas.</p>
+          <div class=" tags"><span class="tag">React</span><span class="tag">Tailwind CSS</span><span
+              class="tag">Next.js</span><span class="tag">shadcn/ui</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="project-image" />
+          <h3>Aplicación e-Commerce</h3> <br>
+          <p>Actualmente participo en el desarrollo de un E-commerce funcional como parte de un proyecto grupal en el
+            curso de Desarrollo Web. El objetivo es simular un entorno real de trabajo colaborativo, aplicando las bases
+            del desarrollo frontend y el consumo de APIs para construir una tienda en línea moderna y responsiva.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+              class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Consumo de
+              API</span><span class="tag">Git & GitHub</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-in">
+      <div class="section-title">
+        <h2>Habilidades</h2>
+        <div class="section-sub">Tecnologías en las que trabajo</div>
+      </div>
+      <div class="skills">
+        <span class="skill">HTML &amp; CSS</span>
+        <span class="skill">Javascript (ES6+)</span>
+        <span class="skill">React / Next.js</span>
+        <span class="skill">UI/UX</span>
+        <span class="skill">Performance</span>
+        <span class="skill">Testing</span>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="fade-in">
+      <div class="section-title">
+        <h2>Sobre mí</h2>
+        <div class="section-sub">Breve presentación</div>
+      </div>
+      <div class="hero-card">
+        <p>Soy desarrollador web con foco en experiencias de usuario. Me gusta transformar problemas complejos en
+          interfaces limpias y mantenibles.</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="fade-in">
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <div class="section-sub">Hablemos de tu proyecto</div>
+      </div>
+      <div class="contact-grid">
+        <form class="form" onsubmit="event.preventDefault(); alert('Formulario enviado (simulado)');">
+          <label for="name">Nombre</label>
+          <input id="name" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="opacity:0.85">© <span id="year"></span> Tu Nombre — Diseño & Desarrollo</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
