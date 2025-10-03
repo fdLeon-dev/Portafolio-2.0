@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — Facundo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav-row">
+      <div class="brand">
+        <div class="logo"><img src="./multimedia/img/avatar.jpg" alt="logo" /></div>
+        <div>
+          <div style="font-size:14px;">Facundo De león</div>
+          <div style="font-size:12px;color:var(--muted);">Diseño & Desarrollo web</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul id="navList">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#ruta">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto" class="cta">Contactame</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="inicio" class="hero fade-in">
+      <div class="hero-card">
+        <div class="eyebrow">Desarrollador · Diseñador</div>
+        <h1>Hola — soy Facundo De León.</h1>
+        <p class="lead">Construyo experiencias digitales limpias y con impacto. Especializado en interfaces, rendimiento
+          y productos listos para producción.</p>
+        <div class="actions">
+          <a class="cta" href="#contacto">Contratar</a>
+          <a class="btn-secundario" href="#proyectos">Ver proyectos</a>
+        </div>
+
+      </div>
+
+      <aside class="profile-tile">
+        <div class="avatar"><img src="./multimedia/img/logo.jpg" alt="avatar" /></div>
+        <div class="mini-stats">
+          <div class="stat"><b>8+</b><span>Años</span></div>
+          <div class="stat"><b>60+</b><span>Proyectos</span></div>
+        </div>
+      </aside>
+      <div class="divider"></div>
+    </section>
+
+
+
+    <section class="workflow-section">
+      <div class="container">
+        <!-- Proceso de trabajo -->
+        <h2 class="section-title">Mi Proceso de Trabajo</h2>
+        <div class="workflow-steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Briefing</h3>
+            <p>Escucho las necesidades del cliente y defino objetivos claros.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Diseño UX/UI</h3>
+            <p>Creo wireframes y prototipos modernos centrados en el usuario.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Desarrollo</h3>
+            <p>Implemento código limpio, optimizado y escalable.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <h3>Testing & Deploy</h3>
+            <p>Pruebo rendimiento y despliego productos listos para producción.</p>
+          </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="stats">
+          <div class="stat-card">
+            <h3>10k+</h3>
+            <p>Horas de código</p>
+          </div>
+          <div class="stat-card">
+            <h3>60+</h3>
+            <p>Proyectos completados</p>
+          </div>
+          <div class="stat-card">
+            <h3>15+</h3>
+            <p>Tecnologías dominadas</p>
+          </div>
+          <div class="stat-card">
+            <h3>5k+</h3>
+            <p>Usuarios alcanzados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- STACK INTERACTIVO -->
+    <section class="stack-section">
+      <div class="container">
+        <h2 class="section-title">Mi Stack Tecnológico</h2>
+        <p class="section-subtitle">Tecnologías y herramientas que uso día a día.</p>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h3>Frontend</h3>
+            <ul>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>Framer Motion</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Prisma</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h3>Herramientas</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Figma</li>
+              <li>Docker</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h3>Otros</h3>
+            <ul>
+              <li>TypeScript</li>
+              <li>GraphQL</li>
+              <li>REST APIs</li>
+              <li>Linux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG / INSIGHTS -->
+    <section class="blog-section">
+      <div class="container">
+        <h2 class="section-title">Blog & Insights</h2>
+        <p class="section-subtitle">Ideas, tendencias y aprendizajes que comparto.</p>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <h3>🚀 Cómo optimizar tu React App</h3>
+            <p>Tips prácticos de rendimiento y buenas prácticas en React.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+          <article class="blog-card">
+            <h3>🎨 UX/UI: Diseño centrado en el usuario</h3>
+            <p>Principios clave para crear interfaces limpias y funcionales.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+          <article class="blog-card">
+            <h3>⚡ El futuro del desarrollo web</h3>
+            <p>Reflexiones sobre nuevas tecnologías y su impacto.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="fade-in">
+
+      <div id="ruta" class="section-title">
+        <h2>Proyectos</h2><br>
+        <div class="section-sub">Selección de trabajos recientes</div><br>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <img src="./multimedia/img/proyecto1.png" alt="Portafolio Retro-Tech" class="project-image">
+          <h3>Portafolio Estilo retro-tech</h3> <br>
+          <p>Diseño inspirado en entornos Linux y terminal, con estilo retro-futurista y visualización de datos. Explora
+            mis proyectos, habilidades y servicios.</p>
+          <div class=" tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+              class="tag">Javascript</span>
+          </div>
+        </article>
+        <article class="project">
+          <img src="./multimedia/img/proyecto2.png" alt="Landing Page" class="project-image" />
+
+          <h3>Landing Page</h3> <br>
+          <p>Diseñé una landing page moderna y funcional para devices_f2, un servicio especializado en soporte técnico y
+            reparación de computadoras.Enfocando la experiencia en la conversión mediante un diseño atractivo y
+            llamadas a la acción directas.</p>
+          <div class=" tags"><span class="tag">React</span><span class="tag">Tailwind CSS</span><span
+              class="tag">Next.js</span><span class="tag">shadcn/ui</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="project-image" />
+          <h3>Aplicación e-Commerce</h3> <br>
+          <p>Actualmente participo en el desarrollo de un E-commerce funcional como parte de un proyecto grupal en el
+            curso de Desarrollo Web. El objetivo es simular un entorno real de trabajo colaborativo, aplicando las bases
+            del desarrollo frontend y el consumo de APIs para construir una tienda en línea moderna y responsiva.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+              class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Consumo de
+              API</span><span class="tag">Git & GitHub</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-in">
+      <div class="section-title">
+        <h2>Habilidades</h2>
+        <div class="section-sub">Tecnologías en las que trabajo</div>
+        <div class="divider"></div>
+
+      </div>
+      <div class="skills">
+        <span class="skill">HTML &amp; CSS</span>
+        <span class="skill">Javascript (ES6+)</span>
+        <span class="skill">React / Next.js</span>
+        <span class="skill">UI/UX</span>
+        <span class="skill">Performance</span>
+        <span class="skill">Testing</span>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="fade-in">
+      <div class="section-title">
+        <h2>Sobre mí</h2>
+        <div class="section-sub">Breve presentación</div>
+      </div>
+      <div class="hero-card">
+        <p>Soy desarrollador web Front-End con experiencia en HTML, CSS, JavaScript y React/Next.js. Me enfoco en crear
+          interfaces atractivas, rápidas y fáciles de usar, transformando ideas en soluciones digitales escalables.</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="fade-in">
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <div class="section-sub">¿Tienes una idea en mente? Escríbeme y te responderé lo antes posible.</div>
+      </div>
+      <div class="contact-grid">
+        <form class="form" onsubmit="event.preventDefault(); alert('Formulario enviado (simulado)');">
+          <label for="name">Nombre</label>
+          <input id="name" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="opacity:0.85">© <span id="year"></span> Facundo De León — Diseño & Desarrollo WEB</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+:root {
+  --bg-1: #130f2c;
+  --bg-2: #1b1038;
+  --accent: #8b5cf6;
+  --accent-2: #c084fc;
+  --muted: #bcb3d8;
+  --glass: rgba(255, 255, 255, 0.04);
+  --card: rgba(255, 255, 255, 0.03);
+  --radius: 14px;
+  --container: 1100px;
+  --shadow: 0 8px 24px rgba(11, 7, 25, 0.6);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 60%);
+  color: #eae6ff;
+  line-height: 1.45;
+  padding-bottom: 80px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 8, 25, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-weight: 800;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: #fff
+}
+
+
+
+a.cta {
+  background: linear-gradient(90deg, #4c1d95, #6d28d9);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
+}
+
+a.cta:hover {
+  background: linear-gradient(90deg, #5b21b6, #7c3aed);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+}
+
+
+
+a.cta:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  color: #fff
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 36px;
+  align-items: center;
+  padding: 48px 0;
+}
+
+.hero-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeInUp 1s ease;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 8px 0
+}
+
+.lead {
+  color: var(--muted)
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px
+}
+
+.btn-secundario {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: .2s
+}
+
+.btn-secundario:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2)
+}
+
+/* Perfil */
+.profile-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  background: var(--glass);
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--accent-2)
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* o 'contain' si no querés recortes */
+  border-radius: inherit;
+  /* mantiene el borde redondeado del logo */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* o 'contain' si no querés recortes */
+  border-radius: inherit;
+  /* mantiene el borde redondeado del logo */
+}
+
+.mini-stats {
+  display: flex;
+  gap: 12px
+}
+
+.stat {
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center
+}
+
+.stat b {
+  display: block;
+  font-size: 18px
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted)
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+section#proyectos {}
+
+
+
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+  margin: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+
+  text-align: center;
+  color: #fff;
+
+}
+
+
+/* Proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px
+}
+
+.project {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  transition: .3s
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 8, 35, 0.6)
+}
+
+.tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap
+}
+
+.tag {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-2)
+}
+
+/* Skills */
+
+
+
+
+
+
+
+.skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.08), rgba(192, 132, 252, 0.04));
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent-2)
+}
+
+/* Contacto */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px
+}
+
+.form {
+  background: var(--glass);
+  padding: 18px;
+  border-radius: 12px
+}
+
+.form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--muted)
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: inherit;
+  margin-bottom: 12px
+}
+
+.form button {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #120726;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transition: color .3s;
+}
+
+.form button:hover {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  color: aliceblue;
+}
+
+.form button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 36px 0;
+  color: var(--muted)
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width:760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Sección Workflow */
+.workflow-section {
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #a855f7;
+}
+
+/* Pasos */
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.step {
+  background: #1a1335;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+.step-number {
+  display: inline-block;
+  background: #a855f7;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.7rem 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.step h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  color: #e9d5ff;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+/* Estadísticas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: #1a1335;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #a855f7;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #d1d5db;
+  font-size: 1rem;
+}
+
+.blog-section {
+  background: #0b0918;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.blog-card {
+  background: #1a1335;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 30px rgba(168, 85, 247, 0.4);
+}
+
+.blog-card h3 {
+  color: #a855f7;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.blog-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.blog-link {
+  display: inline-block;
+  color: #fff;
+  background: #a855f7;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.blog-link:hover {
+  background: #9333ea;
+}
+
+/* STACK INTERACTIVO */
+.stack-section {
+  background: #0d0a1c;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #a855f7;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #d1d5db;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.stack-card {
+  background: #1a1335;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stack-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 30px rgba(168, 85, 247, 0.4);
+}
+
+.stack-card h3 {
+  color: #e9d5ff;
+  margin-bottom: 1rem;
+}
+
+.stack-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stack-card li {
+  padding: 0.4rem 0;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+

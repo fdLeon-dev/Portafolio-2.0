@@ -7,6 +7,8 @@
   <title>Portafolio — Facundo</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,7 +27,7 @@
         <button class="menu-toggle" id="menuToggle">☰</button>
         <ul id="navList">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#ruta">Proyectos</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#contacto" class="cta">Contactame</a></li>
@@ -46,6 +48,7 @@
           <a class="cta" href="#contacto">Contratar</a>
           <a class="btn-secundario" href="#proyectos">Ver proyectos</a>
         </div>
+
       </div>
 
       <aside class="profile-tile">
@@ -55,11 +58,88 @@
           <div class="stat"><b>60+</b><span>Proyectos</span></div>
         </div>
       </aside>
+      <div class="divider"></div>
+    </section>
+
+    <section class="workflow-section">
+      <div class="container">
+        <!-- Proceso de trabajo -->
+        <h2 class="section-title">Mi Proceso de Trabajo</h2>
+        <div class="workflow-steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Briefing</h3>
+            <p>Escucho las necesidades del cliente y defino objetivos claros.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Diseño UX/UI</h3>
+            <p>Creo wireframes y prototipos modernos centrados en el usuario.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Desarrollo</h3>
+            <p>Implemento código limpio, optimizado y escalable.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <h3>Testing & Deploy</h3>
+            <p>Pruebo rendimiento y despliego productos listos para producción.</p>
+          </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="stats">
+          <div class="stat-card">
+            <h3>10k+</h3>
+            <p>Horas de código</p>
+          </div>
+          <div class="stat-card">
+            <h3>60+</h3>
+            <p>Proyectos completados</p>
+          </div>
+          <div class="stat-card">
+            <h3>15+</h3>
+            <p>Tecnologías dominadas</p>
+          </div>
+          <div class="stat-card">
+            <h3>5k+</h3>
+            <p>Usuarios alcanzados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOG / INSIGHTS -->
+    <section class="blog-section">
+      <div class="container">
+        <h2 class="section-title">Blog & Insights</h2>
+        <p class="section-subtitle">Ideas, tendencias y aprendizajes que comparto.</p>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <h3>🚀 Cómo optimizar tu React App</h3>
+            <p>Tips prácticos de rendimiento y buenas prácticas en React.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+          <article class="blog-card">
+            <h3>🎨 UX/UI: Diseño centrado en el usuario</h3>
+            <p>Principios clave para crear interfaces limpias y funcionales.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+          <article class="blog-card">
+            <h3>⚡ El futuro del desarrollo web</h3>
+            <p>Reflexiones sobre nuevas tecnologías y su impacto.</p>
+            <a href="#" class="blog-link">Leer más</a>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- PROYECTOS -->
     <section id="proyectos" class="fade-in">
-      <div class="section-title">
+
+      <div id="ruta" class="section-title">
         <h2>Proyectos</h2><br>
         <div class="section-sub">Selección de trabajos recientes</div><br>
       </div>
@@ -70,10 +150,10 @@
           <h3>Portafolio Estilo retro-tech</h3> <br>
           <p>Diseño inspirado en entornos Linux y terminal, con estilo retro-futurista y visualización de datos. Explora
             mis proyectos, habilidades y servicios.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span>
+          <div class=" tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+              class="tag">Javascript</span>
           </div>
         </article>
-
         <article class="project">
           <img src="./multimedia/img/proyecto2.png" alt="Landing Page" class="project-image" />
 
@@ -101,61 +181,104 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="fade-in">
-      <div class="section-title">
-        <h2>Habilidades</h2>
-        <div class="section-sub">Tecnologías en las que trabajo</div>
-      </div>
-      <div class="skills">
-        <span class="skill">HTML &amp; CSS</span>
-        <span class="skill">Javascript (ES6+)</span>
-        <span class="skill">React / Next.js</span>
-        <span class="skill">UI/UX</span>
-        <span class="skill">Performance</span>
-        <span class="skill">Testing</span>
+    <section>
+      <h2>Habilidades</h2>
+      <p>Tecnologías en las que trabajo</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <h3>HTML & CSS</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="90"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+            <h3>JavaScript (ES6+)</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="85"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            <h3>React / Next.js</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="80"></div>
+          </div>
+          <p class="level">Intermedio-Avanzado</p>
+        </div>
       </div>
     </section>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="fade-in">
-      <div class="section-title">
-        <h2>Sobre mí</h2>
-        <div class="section-sub">Breve presentación</div>
-      </div>
-      <div class="hero-card">
-        <p>Soy desarrollador web con foco en experiencias de usuario. Me gusta transformar problemas complejos en
-          interfaces limpias y mantenibles.</p>
+    <!-- SOBRE MÍ -->
+    <section class="about-section">
+      <div class="container about-card">
+        <div class="about-text">
+          <h2 class="section-title">Sobre mí</h2>
+          <p>
+            Soy <strong>Facundo De León</strong>, desarrollador y diseñador web enfocado en
+            crear experiencias digitales <strong>rápidas, limpias y con impacto</strong>.
+            Me especializo en <em>interfaces, optimización de rendimiento</em>
+            y soluciones listas para producción.
+          </p>
+          <ul class="about-info">
+            <li><strong>Experiencia:</strong> 8+ años</li>
+            <li><strong>Proyectos:</strong> 60+</li>
+            <li><strong>Idiomas:</strong> Español, Inglés</li>
+          </ul>
+          <a href="#" class="about-btn">Descargar CV</a>
+        </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="fade-in">
-      <div class="section-title">
-        <h2>Contacto</h2>
-        <div class="section-sub">Hablemos de tu proyecto</div>
-      </div>
-      <div class="contact-grid">
-        <form class="form" onsubmit="event.preventDefault(); alert('Formulario enviado (simulado)');">
-          <label for="name">Nombre</label>
-          <input id="name" placeholder="Tu nombre" required>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes una idea en mente? Escríbeme y te responderé lo antes posible.</p>
 
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="tu@correo.com" required>
-
-          <label for="message">Mensaje</label>
+      <div class="contact-container">
+        <!-- FORMULARIO -->
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Tu nombre" required>
+          <input type="email" id="email" placeholder="Tu correo" required>
           <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-
           <button type="submit">Enviar mensaje</button>
+          <div class="form-message" id="formMessage"></div>
         </form>
+
+        <!-- INFO DE CONTACTO -->
+        <div class="contact-info">
+          <h3>O si prefieres...</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/tuusuario</a></li>
+            <li><i class="fab fa-github"></i> <a href="#">github.com/tuusuario</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59812345678">+598 123 456 78</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div style="opacity:0.85">© <span id="year"></span> Tu Nombre — Diseño & Desarrollo</div>
-    </div>
+  <footer style="text-align: center; padding: 20px; color: #ccc; font-size: 14px;">
+    © 2025 Facundo De León — Diseño & Desarrollo Web <br>
+    <a href="https://instagram.com/devices_.f2" target="_blank" style="color: #9b59b6; margin: 0 10px;">Instagram</a> |
+    <a href="https://github.com/" target="_blank" style="color: #9b59b6; margin: 0 10px;">GitHub</a>
   </footer>
+
+
 
   <script src="script.js"></script>
 </body>

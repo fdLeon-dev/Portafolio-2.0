@@ -30,3 +30,31 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 faders.forEach(fader => observer.observe(fader));
+
+
+// Animar barras al cargar
+document.addEventListener("DOMContentLoaded", () => {
+  const progresses = document.querySelectorAll(".progress");
+  progresses.forEach(bar => {
+    const level = bar.getAttribute("data-level");
+    setTimeout(() => {
+      bar.style.width = level + "%";
+    }, 300);
+  });
+});
+
+const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  formMessage.style.color = "#c084fc";
+  formMessage.textContent = "📩 Enviando mensaje...";
+
+  // Simulación de envío
+  setTimeout(() => {
+    formMessage.style.color = "#22c55e";
+    formMessage.textContent = "✅ ¡Mensaje enviado con éxito!";
+    form.reset();
+  }, 2000);
+});
