@@ -183,7 +183,7 @@
     <!-- PROYECTOS -->
     <section id="proyectos" class="fade-in">
 
-      <div id="ruta" class="section-title">
+      <div id="proyectos" class="section-title">
         <h2>Proyectos</h2><br>
         <div class="section-sub">Selección de trabajos recientes</div><br>
       </div>
