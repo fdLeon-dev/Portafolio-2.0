@@ -70,7 +70,7 @@
 
         <div class="hab">
           <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card skill-card--hero">
               <div class="skill-header">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
                 <h3>HTML & CSS</h3>
@@ -81,7 +81,7 @@
               <p class="level">Avanzado</p>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card skill-card--hero">
               <div class="skill-header">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   alt="JS">
@@ -93,7 +93,7 @@
               <p class="level">Avanzado</p>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card skill-card--hero">
               <div class="skill-header">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                 <h3>React / Next.js</h3>
@@ -151,6 +151,7 @@
           </div>
 
 
+
         </div>
         <div class="timeline">
           <div class="timeline-item">
@@ -190,44 +191,53 @@
     </section>
 
     <section id="proyectos" class="section">
-      <h2 class="section-title">Proyectos</h2><br>
-      <p class="section-subtitle">Selección de trabajos recientes</p><br>
-      </div>
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">Selección de trabajos recientes</p>
 
       <div class="projects-grid">
         <article class="project">
           <img src="./multimedia/img/proyecto1.png" alt="Portafolio Retro-Tech" class="project-image">
-          <h3>Portafolio Estilo retro-tech</h3> <br>
-          <p>Diseño inspirado en entornos Linux y terminal, con estilo retro-futurista y visualización de datos.
-            Explora
-            mis proyectos, habilidades y servicios.</p>
-          <div class=" tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-              class="tag">Javascript</span>
+          <div class="project-content">
+            <h3>Portafolio Estilo retro-tech</h3>
+            <p>Diseño inspirado en entornos Linux y terminal, con estilo retro-futurista y visualización de datos.
+              Explora mis proyectos, habilidades y servicios.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
           </div>
         </article>
+
         <article class="project">
           <img src="./multimedia/img/proyecto2.png" alt="Landing Page" class="project-image" />
-
-          <h3>Landing Page</h3> <br>
-          <p>Diseñé una landing page moderna y funcional para devices_f2, un servicio especializado en soporte
-            técnico
-            y
-            reparación de computadoras.</p>
-          <div class=" tags"><span class="tag">React</span><span class="tag">Tailwind CSS</span><span
-              class="tag">Next.js</span><span class="tag">shadcn/ui</span>
+          <div class="project-content">
+            <h3>Landing Page</h3>
+            <p>Diseñé una landing page moderna y funcional para devices_f2, un servicio especializado en soporte
+              técnico y reparación de computadoras.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">shadcn/ui</span>
+            </div>
           </div>
         </article>
 
         <article class="project">
           <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="project-image" />
-          <h3>Aplicación e-Commerce</h3> <br>
-          <p>Actualmente participo en el desarrollo de un E-commerce funcional como parte de un proyecto grupal en
-            el
-            curso de Desarrollo Web.
-          </p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-              class="tag">Bootstrap</span><span class="tag">JavaScript</span><span class="tag">Consumo de
-              API</span><span class="tag">Git & GitHub</span>
+          <div class="project-content">
+            <h3>Aplicación e-Commerce</h3>
+            <p>Actualmente participo en el desarrollo de un E-commerce funcional como parte de un proyecto grupal en
+              el curso de Desarrollo Web.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">API</span>
+              <span class="tag">Git & GitHub</span>
+            </div>
           </div>
         </article>
       </div>
@@ -291,22 +301,33 @@
       <p class="section-subtitle">Ideas, tendencias y aprendizajes que comparto.</p>
       <div class="blog-grid">
         <article class="blog-card">
-          <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="blog-image" />
-          <h3>🚀 Cómo optimizar tu React App</h3>
-          <p>Tips prácticos de rendimiento y buenas prácticas en React.</p>
-          <a href="#" class="blog-link">Leer más</a>
+          <img src="./multimedia/img/proyecto3.png" alt="React App Optimization" class="blog-image" />
+          <div class="blog-content">
+            <h3>🚀 Cómo optimizar tu React App</h3>
+            <p>Tips prácticos de rendimiento y buenas prácticas en React. Aprende técnicas avanzadas para mejorar la
+              velocidad y eficiencia de tus aplicaciones.</p>
+            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
+
         <article class="blog-card">
-          <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="project-image" />
-          <h3>🎨 UX/UI: Diseño centrado en el usuario</h3>
-          <p>Principios clave para crear interfaces limpias y funcionales.</p>
-          <a href="#" class="blog-link">Leer más</a>
+          <img src="./multimedia/img/proyecto3.png" alt="UX/UI Design" class="blog-image" />
+          <div class="blog-content">
+            <h3>🎨 UX/UI: Diseño centrado en el usuario</h3>
+            <p>Principios clave para crear interfaces limpias y funcionales. Descubre cómo diseñar experiencias que los
+              usuarios realmente disfruten.</p>
+            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
+
         <article class="blog-card">
-          <img src="./multimedia/img/proyecto3.png" alt="E-commerce" class="project-image" />
-          <h3>⚡ El futuro del desarrollo web</h3>
-          <p>Reflexiones sobre nuevas tecnologías y su impacto.</p>
-          <a href="#" class="blog-link">Leer más</a>
+          <img src="./multimedia/img/proyecto3.png" alt="Web Development Future" class="blog-image" />
+          <div class="blog-content">
+            <h3>⚡ El futuro del desarrollo web</h3>
+            <p>Reflexiones sobre nuevas tecnologías y su impacto. Exploramos las tendencias que están moldeando el
+              futuro de la web.</p>
+            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
       </div>
     </section>
