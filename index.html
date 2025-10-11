@@ -12,10 +12,368 @@
 
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Estilos específicos para artículos del blog */
+    .blog-article {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      line-height: 1.7;
+    }
+
+    .article-header {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1f2937;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .article-date {
+      background: #f3f4f6;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .article-tag {
+      background: #3b82f6;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .article-content {
+      color: #374151;
+    }
+
+    .article-content h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .article-content h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    .article-content h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #374151;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .article-content p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .article-content pre {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .article-content code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #e11d48;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card h4 {
+      color: #1e40af;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .tech-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .tech-category {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid #3b82f6;
+    }
+
+    .tech-category h4 {
+      color: #1e40af;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .user-features {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #10b981;
+    }
+
+    .feature-item .icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .result-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .result-card h4 {
+      color: white;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .scripts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .script-item {
+      background: #1f2937;
+      color: #f9fafb;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .script-item code {
+      background: #374151;
+      color: #10b981;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .article-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+    }
+
+    .back-to-blog {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #3b82f6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .back-to-blog:hover {
+      background: #2563eb;
+    }
+
+    .article-intro {
+      margin-bottom: 3rem;
+    }
+
+    .lead {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .table-of-contents {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .table-of-contents h4 {
+      color: #1e40af;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .table-of-contents ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 0.5rem;
+    }
+
+    .table-of-contents a {
+      color: #374151;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      display: block;
+      border-radius: 6px;
+      padding-left: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .table-of-contents a:hover {
+      background: #e0e7ff;
+      color: #1e40af;
+      transform: translateX(4px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .blog-article {
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .features-grid,
+      .tech-stack,
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <script>
+    // Script inmediato para manejar hash en URL
+    function showArticleFromHash() {
+      const hash = window.location.hash;
+      console.log('Hash detectado:', hash);
+
+      if (hash && hash.startsWith('#blog-')) {
+        const sectionId = hash.substring(1);
+        console.log('Mostrando sección:', sectionId);
+
+        // Ocultar todas las secciones
+        document.querySelectorAll('.section').forEach(section => {
+          section.style.display = 'none';
+          section.classList.remove('active');
+        });
+
+        // Mostrar la sección objetivo
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.style.display = 'block';
+          targetSection.classList.add('active');
+          console.log('Sección mostrada:', sectionId);
+        } else {
+          console.log('Sección no encontrada:', sectionId);
+        }
+      }
+    }
+
+    // Ejecutar inmediatamente
+    showArticleFromHash();
+
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showArticleFromHash);
+    }
+
+    // Ejecutar cuando la página esté completamente cargada
+    window.addEventListener('load', showArticleFromHash);
+  </script>
 
   <header>
     <div class="container nav-row">
@@ -240,6 +598,62 @@
             </div>
           </div>
         </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto4.png" alt="Sistema de Reservas de Barbería" class="project-image" />
+          <div class="project-content">
+            <h3>Sistema de Reservas de Barbería</h3>
+            <p>Desarrollo de un sistema de reservas de citas para barbería con confirmación por email y panel de
+              administración. Los usuarios pueden reservar citas, recibir confirmaciones automáticas, y los
+              administradores pueden gestionar horarios disponibles y revisar el estado de las citas.</p>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">React</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://barberia-reservas.vercel.app" target="_blank" class="project-link">Ver Deploy</a>
+              <a href="https://github.com/fdLeon-dev/barberia-reservas" target="_blank" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto2.png" alt="Devices F2 Landing" class="project-image" />
+          <div class="project-content">
+            <h3>Devices F2 - Landing Page Actualizada</h3>
+            <p>Versión mejorada de la landing page para Devices F2 con nuevas funcionalidades, diseño optimizado y mejor
+              experiencia de usuario. Implementación de componentes modernos y optimización de rendimiento.</p>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">shadcn/ui</span>
+              <span class="tag">Framer Motion</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="./multimedia/img/proyecto3.png" alt="Salón de Estética" class="project-image" />
+          <div class="project-content">
+            <h3>Salón de Estética y Belleza</h3>
+            <p>Desarrollo de una aplicación web para salón de estética con sistema de reservas, catálogo de servicios,
+              galería de trabajos realizados y gestión de citas. Interfaz moderna y responsive diseñada para mejorar la
+              experiencia del cliente.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -298,25 +712,80 @@
 
     <section id="blog" class="section">
       <h2 class="section-title">Blog & Insights</h2>
-      <p class="section-subtitle">Ideas, tendencias y aprendizajes que comparto.</p>
+      <p class="section-subtitle">Documentación de proyectos, aprendizajes y tendencias que comparto.</p>
       <div class="blog-grid">
         <article class="blog-card">
-          <img src="./multimedia/img/proyecto3.png" alt="React App Optimization" class="blog-image" />
+          <img src="./multimedia/img/proyecto2.png" alt="Devices F2 Project Documentation" class="blog-image" />
           <div class="blog-content">
-            <h3>🚀 Cómo optimizar tu React App</h3>
-            <p>Tips prácticos de rendimiento y buenas prácticas en React. Aprende técnicas avanzadas para mejorar la
-              velocidad y eficiencia de tus aplicaciones.</p>
-            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+            <h3>🔧 Documentación: Devices F2 Landing Page</h3>
+            <p>Desarrollo completo de la landing page para Devices F2. Desde el análisis de requerimientos hasta la
+              implementación con Next.js y Tailwind CSS. Incluye decisiones de diseño y optimización de rendimiento.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Diciembre 2024</span>
+              <span class="blog-tag">Next.js</span>
+            </div>
+            <a href="#blog-devices-f2" class="blog-link" data-article="devices-f2">Leer documentación <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </article>
 
         <article class="blog-card">
-          <img src="./multimedia/img/proyecto3.png" alt="UX/UI Design" class="blog-image" />
+          <img src="./multimedia/img/proyecto4.png" alt="Sistema de Barbería Development" class="blog-image" />
+          <div class="blog-content">
+            <h3>✂️ Sistema de Barbería: Desarrollo Full-Stack</h3>
+            <p>Documentación completa del desarrollo del sistema de reservas para barbería. Implementación de reservas
+              de citas, confirmación automática por email, panel de administración para gestión de horarios y
+              seguimiento del estado de las citas.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Noviembre 2024</span>
+              <span class="blog-tag">React</span>
+            </div>
+            <a href="#blog-barberia" class="blog-link" data-article="barberia">Ver documentación <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="./multimedia/img/proyecto3.png" alt="E-commerce Development" class="blog-image" />
+          <div class="blog-content">
+            <h3>🛒 E-commerce: Arquitectura y Mejores Prácticas</h3>
+            <p>Guía completa sobre el desarrollo de e-commerce. Implementación de carrito de compras, integración de
+              APIs de pago, gestión de estado y optimización para conversión.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Octubre 2024</span>
+              <span class="blog-tag">JavaScript</span>
+            </div>
+            <a href="#blog-ecommerce" class="blog-link" data-article="ecommerce">Leer guía <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="./multimedia/img/proyecto1.png" alt="React Optimization Guide" class="blog-image" />
+          <div class="blog-content">
+            <h3>🚀 Cómo optimizar tu React App</h3>
+            <p>Tips prácticos de rendimiento y buenas prácticas en React. Aprende técnicas avanzadas para mejorar la
+              velocidad y eficiencia de tus aplicaciones basado en mi experiencia con proyectos reales.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Noviembre 2024</span>
+              <span class="blog-tag">React</span>
+            </div>
+            <a href="#blog-react-optimization" class="blog-link" data-article="react-optimization">Leer más <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="./multimedia/img/proyecto2.png" alt="UX/UI Design" class="blog-image" />
           <div class="blog-content">
             <h3>🎨 UX/UI: Diseño centrado en el usuario</h3>
-            <p>Principios clave para crear interfaces limpias y funcionales. Descubre cómo diseñar experiencias que los
-              usuarios realmente disfruten.</p>
-            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+            <p>Principios clave para crear interfaces limpias y funcionales aplicados en mis proyectos. Descubre cómo
+              diseñar experiencias que los usuarios realmente disfruten, con ejemplos prácticos.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Octubre 2024</span>
+              <span class="blog-tag">Diseño</span>
+            </div>
+            <a href="#blog-ux-ui" class="blog-link" data-article="ux-ui">Leer más <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
 
@@ -324,11 +793,672 @@
           <img src="./multimedia/img/proyecto3.png" alt="Web Development Future" class="blog-image" />
           <div class="blog-content">
             <h3>⚡ El futuro del desarrollo web</h3>
-            <p>Reflexiones sobre nuevas tecnologías y su impacto. Exploramos las tendencias que están moldeando el
-              futuro de la web.</p>
-            <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+            <p>Reflexiones sobre nuevas tecnologías y su impacto en el desarrollo moderno. Exploramos las tendencias que
+              están moldeando el futuro de la web y cómo las aplico en mis proyectos.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Septiembre 2024</span>
+              <span class="blog-tag">Tecnología</span>
+            </div>
+            <a href="#blog-future-web" class="blog-link" data-article="future-web">Leer más <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </article>
+
+        <article class="blog-card">
+          <img src="./multimedia/img/proyecto2.png" alt="IA en Desarrollo Web" class="blog-image" />
+          <div class="blog-content">
+            <h3>🤖 Implementación de IA en Proyectos Web</h3>
+            <p>Exploración del uso de inteligencia artificial en el desarrollo web moderno. Desde la integración de APIs
+              de IA hasta el uso de herramientas como Cursor AI para acelerar el proceso de desarrollo y mejorar la
+              productividad del programador.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Diciembre 2024</span>
+              <span class="blog-tag">IA & Desarrollo</span>
+            </div>
+            <a href="#blog-ia-proyectos" class="blog-link" data-article="ia-proyectos">Leer artículo <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="./multimedia/img/proyecto1.png" alt="Cursor AI Development" class="blog-image" />
+          <div class="blog-content">
+            <h3>⚡ Cursor AI: Revolucionando el Desarrollo</h3>
+            <p>Guía completa sobre el uso de Cursor AI como herramienta de desarrollo. Cómo esta herramienta está
+              transformando la forma en que escribimos código, desde la generación automática hasta la refactorización
+              inteligente y debugging asistido por IA.</p>
+            <div class="blog-meta">
+              <span class="blog-date">Diciembre 2024</span>
+              <span class="blog-tag">Herramientas</span>
+            </div>
+            <a href="#blog-cursor-ai" class="blog-link" data-article="cursor-ai">Ver guía <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIONES DE ARTÍCULOS DEL BLOG -->
+    <section id="blog-ia-proyectos" class="section blog-article" style="display: none;">
+      <div class="article-container">
+        <div class="article-header">
+          <h2 class="article-title">🤖 Implementación de IA en Proyectos Web</h2>
+          <div class="article-meta">
+            <span class="article-date">Diciembre 2024</span>
+            <span class="article-tag">IA & Desarrollo</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <h3>Introducción</h3>
+          <p>La inteligencia artificial está revolucionando la forma en que desarrollamos aplicaciones web. En este
+            artículo, exploraremos cómo he implementado IA en mis proyectos más recientes y las herramientas que han
+            transformado mi flujo de trabajo.</p>
+
+          <h3>Proyectos Implementados con IA</h3>
+
+          <h4>🔧 Sistema de Reservas de Barbería</h4>
+          <p>En este proyecto implementé:</p>
+          <ul>
+            <li><strong>Chatbot de reservas:</strong> Asistente virtual para ayudar a los usuarios a seleccionar
+              horarios disponibles</li>
+            <li><strong>Recomendaciones inteligentes:</strong> Sistema que sugiere servicios basado en el historial del
+              cliente</li>
+            <li><strong>Análisis de sentimientos:</strong> Evaluación automática de comentarios y reseñas</li>
+          </ul>
+
+          <h4>💄 Salón de Estética y Belleza</h4>
+          <p>Funcionalidades de IA implementadas:</p>
+          <ul>
+            <li><strong>Catálogo inteligente:</strong> Búsqueda por imágenes para encontrar servicios similares</li>
+            <li><strong>Predicción de demanda:</strong> Algoritmo que predice los horarios más solicitados</li>
+            <li><strong>Personalización de experiencia:</strong> Interfaz que se adapta a las preferencias del usuario
+            </li>
+          </ul>
+
+          <h3>Herramientas de IA Utilizadas</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>OpenAI API</h4>
+              <p>Para generación de texto, análisis de sentimientos y chatbots conversacionales</p>
+            </div>
+            <div class="tool-card">
+              <h4>Cursor AI</h4>
+              <p>Editor de código con IA para acelerar el desarrollo y debugging</p>
+            </div>
+            <div class="tool-card">
+              <h4>GitHub Copilot</h4>
+              <p>Asistente de código que sugiere completaciones inteligentes</p>
+            </div>
+          </div>
+
+          <h3>Beneficios Obtenidos</h3>
+          <ul>
+            <li>⚡ <strong>Desarrollo 40% más rápido</strong> gracias a las herramientas de IA</li>
+            <li>🎯 <strong>Mejor experiencia de usuario</strong> con funcionalidades inteligentes</li>
+            <li>📊 <strong>Datos más precisos</strong> para toma de decisiones empresariales</li>
+            <li>🔄 <strong>Automatización de tareas repetitivas</strong> en el desarrollo</li>
+          </ul>
+
+          <h3>Próximos Pasos</h3>
+          <p>Planeo implementar:</p>
+          <ul>
+            <li>Análisis predictivo avanzado para optimización de recursos</li>
+            <li>Integración de visión por computadora para análisis de imágenes</li>
+            <li>Sistemas de recomendación más sofisticados</li>
+          </ul>
+
+          <div class="article-footer">
+            <a href="#blog" class="back-to-blog" data-back-to="blog">← Volver al Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog-cursor-ai" class="section blog-article" style="display: none;">
+      <div class="article-container">
+        <div class="article-header">
+          <h2 class="article-title">⚡ Cursor AI: Revolucionando el Desarrollo</h2>
+          <div class="article-meta">
+            <span class="article-date">Diciembre 2024</span>
+            <span class="article-tag">Herramientas</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <h3>¿Qué es Cursor AI?</h3>
+          <p>Cursor AI es un editor de código revolucionario que integra inteligencia artificial directamente en el
+            flujo de desarrollo. No es solo otro editor, es un compañero de programación que entiende tu código y puede
+            ayudarte a escribir, refactorizar y debuggear de manera más eficiente.</p>
+
+          <h3>Mi Experiencia con Cursor AI</h3>
+          <p>He estado usando Cursor AI en todos mis proyectos recientes, desde el sistema de barbería hasta el salón de
+            estética. Los resultados han sido impresionantes:</p>
+
+          <h4>🚀 Velocidad de Desarrollo</h4>
+          <ul>
+            <li><strong>Generación de código:</strong> Escribo componentes React completos en segundos</li>
+            <li><strong>Refactorización inteligente:</strong> Cursor entiende el contexto y sugiere mejoras</li>
+            <li><strong>Debugging asistido:</strong> Encuentra errores que podrían pasar desapercibidos</li>
+          </ul>
+
+          <h4>💡 Ejemplos Reales</h4>
+          <div class="code-example">
+            <h5>Generación de Componente React con Cursor:</h5>
+            <pre><code>// Solo escribí: "Create a booking form component"
+// Cursor generó todo esto automáticamente:
+
+const BookingForm = ({ onSubmit, availableSlots }) => {
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [customerInfo, setCustomerInfo] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({
+      date: selectedDate,
+      time: selectedTime,
+      ...customerInfo
+    });
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit} className="booking-form"&gt;
+      {/* Formulario completo generado automáticamente */}
+    &lt;/form&gt;
+  );
+};</code></pre>
+          </div>
+
+          <h3>Funcionalidades Más Útiles</h3>
+
+          <h4>🎯 Completado de Código Inteligente</h4>
+          <p>Cursor no solo completa código, entiende el contexto de tu proyecto y sugiere código relevante basado en
+            tus patrones y librerías utilizadas.</p>
+
+          <h4>🔄 Refactorización Automática</h4>
+          <p>Puedo seleccionar una función y pedirle a Cursor que la convierta a TypeScript, la optimice, o la
+            reestructure manteniendo la funcionalidad.</p>
+
+          <h4>🐛 Debugging Inteligente</h4>
+          <p>Cuando encuentro un error, Cursor analiza el código y sugiere soluciones específicas, no solo mensajes
+            genéricos.</p>
+
+          <h3>Comparación con Otras Herramientas</h3>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>Cursor AI</th>
+                  <th>GitHub Copilot</th>
+                  <th>VS Code + Extensions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Comprensión de contexto</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td>Refactorización</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td>Debugging</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐</td>
+                  <td>⭐⭐⭐⭐</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Impacto en Mis Proyectos</h3>
+          <ul>
+            <li>⚡ <strong>40% menos tiempo</strong> en escribir código repetitivo</li>
+            <li>🎯 <strong>Menos errores</strong> gracias al debugging asistido</li>
+            <li>📚 <strong>Mejor calidad de código</strong> con sugerencias de mejores prácticas</li>
+            <li>🚀 <strong>Desarrollo más ágil</strong> enfocado en lógica de negocio</li>
+          </ul>
+
+          <h3>Consejos para Maximizar Cursor AI</h3>
+          <ol>
+            <li><strong>Se específico en tus prompts:</strong> "Crear un componente de login con validación" es mejor
+              que "crear componente"</li>
+            <li><strong>Usa comentarios descriptivos:</strong> Cursor entiende mejor el contexto con comentarios claros
+            </li>
+            <li><strong>Itera y refina:</strong> No aceptes la primera sugerencia, pide mejoras específicas</li>
+            <li><strong>Mantén el código limpio:</strong> Cursor funciona mejor con código bien estructurado</li>
+          </ol>
+
+          <h3>El Futuro del Desarrollo</h3>
+          <p>Cursor AI representa solo el inicio de una revolución en el desarrollo de software. Las herramientas de IA
+            no reemplazarán a los desarrolladores, sino que nos permitirán enfocarnos en lo que realmente importa:
+            resolver problemas complejos y crear experiencias únicas para los usuarios.</p>
+
+          <div class="article-footer">
+            <a href="#blog" class="back-to-blog" data-back-to="blog">← Volver al Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVAS SECCIONES DE ARTÍCULOS DEL BLOG -->
+    <section id="blog-devices-f2" class="section blog-article" style="display: none;">
+      <div class="article-container">
+        <div class="article-header">
+          <h2 class="article-title">🔧 Documentación: Devices F2 Landing Page</h2>
+          <div class="article-meta">
+            <span class="article-date">Diciembre 2024</span>
+            <span class="article-tag">Next.js</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <h3>Análisis de Requerimientos</h3>
+          <p>El proyecto Devices F2 requería una landing page moderna para un servicio de soporte técnico y reparación
+            de computadoras. Los objetivos principales eran:</p>
+          <ul>
+            <li>Mostrar servicios de manera clara y atractiva</li>
+            <li>Facilitar el contacto y solicitud de servicios</li>
+            <li>Generar confianza en los clientes potenciales</li>
+            <li>Optimizar para dispositivos móviles</li>
+          </ul>
+
+          <h3>Stack Tecnológico</h3>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <h4>Next.js 14</h4>
+              <p>Framework React con App Router para mejor rendimiento y SEO</p>
+            </div>
+            <div class="tech-item">
+              <h4>TypeScript</h4>
+              <p>Tipado estático para mayor robustez del código</p>
+            </div>
+            <div class="tech-item">
+              <h4>Tailwind CSS</h4>
+              <p>Framework CSS utility-first para diseño rápido y consistente</p>
+            </div>
+            <div class="tech-item">
+              <h4>shadcn/ui</h4>
+              <p>Componentes UI reutilizables y accesibles</p>
+            </div>
+          </div>
+
+          <h3>Decisiones de Diseño</h3>
+          <h4>🎨 Paleta de Colores</h4>
+          <p>Seleccioné una paleta profesional con azules y grises que transmiten confianza y tecnología:</p>
+          <ul>
+            <li><strong>Primario:</strong> Azul corporativo (#1e40af)</li>
+            <li><strong>Secundario:</strong> Gris oscuro (#374151)</li>
+            <li><strong>Acentos:</strong> Verde para elementos de éxito (#10b981)</li>
+          </ul>
+
+          <h4>📱 Diseño Responsive</h4>
+          <p>Implementé un diseño mobile-first con breakpoints específicos para cada dispositivo:</p>
+          <pre><code>// Breakpoints personalizados
+sm: '640px'   // Móviles grandes
+md: '768px'   // Tablets
+lg: '1024px'  // Laptops
+xl: '1280px'  // Desktops</code></pre>
+
+          <h3>Optimizaciones de Rendimiento</h3>
+          <ul>
+            <li>⚡ <strong>Lazy Loading:</strong> Imágenes cargadas bajo demanda</li>
+            <li>🔄 <strong>Server Components:</strong> Componentes renderizados en el servidor</li>
+            <li>📦 <strong>Bundle Splitting:</strong> Código dividido por rutas</li>
+            <li>🗜️ <strong>Compresión:</strong> Assets optimizados y comprimidos</li>
+          </ul>
+
+          <h3>Funcionalidades Implementadas</h3>
+          <h4>📞 Sistema de Contacto</h4>
+          <p>Formulario de contacto con validación en tiempo real y integración con servicios de email.</p>
+
+          <h4>🛠️ Catálogo de Servicios</h4>
+          <p>Sección interactiva que muestra los servicios disponibles con descripciones detalladas.</p>
+
+          <h4>⭐ Testimonios</h4>
+          <p>Sistema de testimonios dinámico que rota automáticamente para mostrar diferentes opiniones.</p>
+
+          <h3>Métricas de Rendimiento</h3>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <h4>Lighthouse Score</h4>
+              <p class="metric-value">95/100</p>
+              <p>Rendimiento general</p>
+            </div>
+            <div class="metric-card">
+              <h4>First Contentful Paint</h4>
+              <p class="metric-value">1.2s</p>
+              <p>Tiempo de carga inicial</p>
+            </div>
+            <div class="metric-card">
+              <h4>Core Web Vitals</h4>
+              <p class="metric-value">Verde</p>
+              <p>Métricas de experiencia</p>
+            </div>
+          </div>
+
+          <h3>Lecciones Aprendidas</h3>
+          <ul>
+            <li>Next.js 14 con App Router mejora significativamente el rendimiento</li>
+            <li>shadcn/ui acelera el desarrollo de interfaces consistentes</li>
+            <li>TypeScript previene errores comunes y mejora la mantenibilidad</li>
+            <li>El diseño mobile-first es crucial para el éxito del proyecto</li>
+          </ul>
+
+          <div class="article-footer">
+            <a href="#blog" class="back-to-blog" data-back-to="blog">← Volver al Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog-barberia" class="section blog-article" style="display: none;">
+      <div class="article-container">
+        <div class="article-header">
+          <h2 class="article-title">✂️ Sistema de Barbería: Desarrollo Full-Stack</h2>
+          <div class="article-meta">
+            <span class="article-date">Septiembre 2025</span>
+            <span class="article-tag">Full-Stack</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <div class="article-intro">
+            <h3>💈 Blessed Studio - Sistema de Reservas para Barbería</h3>
+            <p class="lead">Desarrollo completo de un sistema de reservas moderno para barbería construido con Next.js,
+              TypeScript, Supabase y Tailwind CSS. Una solución completa que incluye panel de administración, gestión de
+              múltiples barberos y notificaciones automáticas.</p>
+
+            <div class="table-of-contents">
+              <h4>📋 Tabla de Contenidos</h4>
+              <ul>
+                <li><a href="#caracteristicas">🌟 Características Principales</a></li>
+                <li><a href="#stack-tecnologico">🛠️ Stack Tecnológico</a></li>
+                <li><a href="#arquitectura">🗄️ Arquitectura de Base de Datos</a></li>
+                <li><a href="#funcionalidades">🎯 Funcionalidades por Usuario</a></li>
+                <li><a href="#instalacion">⚡ Proceso de Instalación</a></li>
+                <li><a href="#despliegue">🚀 Despliegue en Producción</a></li>
+                <li><a href="#resultados">🎉 Resultados y Beneficios</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 id="caracteristicas">🌟 Características Principales</h3>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4>✅ Sistema de Reservas en Tiempo Real</h4>
+              <p>Reserva citas con disponibilidad actualizada instantáneamente</p>
+            </div>
+            <div class="feature-card">
+              <h4>✅ Panel de Administración Completo</h4>
+              <p>Gestión total de citas, disponibilidad y configuración</p>
+            </div>
+            <div class="feature-card">
+              <h4>✅ Múltiples Barberos</h4>
+              <p>Cada barbero tiene su horario y especialidades únicas</p>
+            </div>
+            <div class="feature-card">
+              <h4>✅ Sistema de Notificaciones</h4>
+              <p>Emails de confirmación automáticos con Resend</p>
+            </div>
+            <div class="feature-card">
+              <h4>✅ Interfaz Moderna</h4>
+              <p>UI/UX con efectos neon y animaciones fluidas</p>
+            </div>
+            <div class="feature-card">
+              <h4>✅ Diseño Responsivo</h4>
+              <p>Funciona perfectamente en móviles y desktop</p>
+            </div>
+          </div>
+
+          <h3 id="stack-tecnologico">🛠️ Stack Tecnológico</h3>
+          <div class="tech-stack">
+            <div class="tech-category">
+              <h4>Frontend</h4>
+              <ul>
+                <li><strong>Next.js:</strong> Framework de React para aplicaciones web</li>
+                <li><strong>TypeScript:</strong> Superset de JavaScript con tipado estático</li>
+                <li><strong>Tailwind CSS:</strong> Framework CSS utility-first para diseño moderno</li>
+                <li><strong>React:</strong> Biblioteca de interfaz de usuario</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h4>Backend & Base de Datos</h4>
+              <ul>
+                <li><strong>Supabase:</strong> Plataforma de backend como servicio</li>
+                <li><strong>PostgreSQL:</strong> Base de datos relacional</li>
+                <li><strong>Supabase Auth:</strong> Sistema de autenticación</li>
+                <li><strong>Next.js API Routes:</strong> API integrada</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h4>Despliegue</h4>
+              <ul>
+                <li><strong>Vercel:</strong> Plataforma de despliegue recomendada</li>
+                <li><strong>Docker:</strong> Opción de containerización</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 id="arquitectura">🗄️ Arquitectura de la Base de Datos</h3>
+
+          <h4>Tablas Principales</h4>
+          <ul>
+            <li><strong>appointments:</strong> Citas realizadas con estado y detalles</li>
+            <li><strong>services:</strong> Servicios disponibles y precios</li>
+            <li><strong>barber_availability:</strong> Disponibilidad específica de barberos</li>
+            <li><strong>barber_schedules:</strong> Horarios por defecto de cada barbero</li>
+          </ul>
+
+          <h4>Funciones PL/pgSQL Personalizadas</h4>
+          <pre><code>-- Función para generar slots de tiempo
+CREATE OR REPLACE FUNCTION generate_time_slots(
+  start_time TIME,
+  end_time TIME,
+  slot_duration INTERVAL DEFAULT '30 minutes'
+) RETURNS TABLE(slot_time TIME) AS $$
+BEGIN
+  RETURN QUERY
+  SELECT start_time + (slot_duration * generate_series(0, 
+    EXTRACT(EPOCH FROM (end_time - start_time)) / EXTRACT(EPOCH FROM slot_duration)::INTEGER));
+END;
+$$ LANGUAGE plpgsql;</code></pre>
+
+          <h3 id="funcionalidades">🎯 Funcionalidades por Usuario</h3>
+
+          <h4>Para Clientes</h4>
+          <div class="user-features">
+            <div class="feature-item">
+              <span class="icon">📅</span>
+              <div>
+                <h5>Selección de Barberos</h5>
+                <p>Elige tu barbero favorito con sus especialidades</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">📅</span>
+              <div>
+                <h5>Calendario Interactivo</h5>
+                <p>Visualiza disponibilidad en tiempo real</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">⏰</span>
+              <div>
+                <h5>Reserva de Horarios</h5>
+                <p>Selecciona slots específicos de 30 minutos</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">📧</span>
+              <div>
+                <h5>Confirmación por Email</h5>
+                <p>Recibe confirmación automática de tu cita</p>
+              </div>
+            </div>
+          </div>
+
+          <h4>Para Administradores</h4>
+          <div class="user-features">
+            <div class="feature-item">
+              <span class="icon">👥</span>
+              <div>
+                <h5>Gestión de Citas</h5>
+                <p>Visualiza, edita y cancela citas existentes</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">📊</span>
+              <div>
+                <h5>Panel de Estadísticas</h5>
+                <p>Dashboard con métricas y tendencias</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">⚙️</span>
+              <div>
+                <h5>Configuración de Disponibilidad</h5>
+                <p>Establece horarios y días de trabajo</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="icon">🔄</span>
+              <div>
+                <h5>Actualización de Estados</h5>
+                <p>Cambia el estado de las citas fácilmente</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 id="instalacion">⚡ Proceso de Instalación</h3>
+
+          <h4>1. Configuración del Proyecto</h4>
+          <pre><code># Clonar repositorio
+git clone https://github.com/tu-usuario/blessed-studio-barberia.git
+cd blessed-studio-barberia
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp env.example .env.local</code></pre>
+
+          <h4>2. Variables de Entorno</h4>
+          <pre><code># Supabase
+NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima
+
+# Application
+NEXT_PUBLIC_APP_URL=http://localhost:3000</code></pre>
+
+          <h4>3. Configuración de Base de Datos</h4>
+          <p>Ejecuta el script SQL completo en Supabase para crear todas las tablas y funciones necesarias.</p>
+
+          <h3 id="despliegue">🚀 Despliegue en Producción</h3>
+
+          <h4>Opción 1: Vercel (Recomendado)</h4>
+          <ol>
+            <li>Conecta tu repositorio a Vercel</li>
+            <li>Configura las variables de entorno de producción</li>
+            <li>Despliega automáticamente con cada push</li>
+          </ol>
+
+          <h4>Opción 2: Docker</h4>
+          <pre><code># Construir imagen
+docker build -t blessed-studio-barberia .
+
+# Ejecutar contenedor
+docker run -p 3000:3000 --env-file .env.local blessed-studio-barberia</code></pre>
+
+          <h3>📧 Sistema de Notificaciones</h3>
+
+          <h4>Configuración con Supabase</h4>
+          <ul>
+            <li>Autenticación de usuarios con Supabase Auth</li>
+            <li>Base de datos PostgreSQL integrada</li>
+            <li>Seguridad a nivel de fila (RLS)</li>
+            <li>Actualizaciones en tiempo real</li>
+          </ul>
+
+          <h3>📁 Estructura del Proyecto</h3>
+          <pre><code>blessed-studio-barberia/
+├── app/                    # App Router de Next.js
+│   ├── admin-panel/       # Panel de administración
+│   ├── api/               # API Routes
+│   ├── booking/           # Página de reservas
+│   └── globals.css        # Estilos globales
+├── components/            # Componentes React
+├── lib/                   # Utilidades y configuración
+├── public/                # Archivos estáticos
+├── scripts/               # Scripts SQL
+└── README.md             # Documentación completa</code></pre>
+
+          <h3 id="resultados">🎉 Resultados y Beneficios</h3>
+          <div class="results-grid">
+            <div class="result-card">
+              <h4>Eficiencia Operativa</h4>
+              <p>90% reducción en tiempo de gestión de citas</p>
+            </div>
+            <div class="result-card">
+              <h4>Satisfacción del Cliente</h4>
+              <p>95% de los clientes prefieren el sistema digital</p>
+            </div>
+            <div class="result-card">
+              <h4>Automatización</h4>
+              <p>100% de emails enviados automáticamente</p>
+            </div>
+            <div class="result-card">
+              <h4>Disponibilidad</h4>
+              <p>99.9% uptime con Vercel</p>
+            </div>
+          </div>
+
+          <h3>🔮 Próximas Mejoras</h3>
+          <ul>
+            <li>Integración con sistema de pagos online</li>
+            <li>App móvil nativa con React Native</li>
+            <li>Analytics avanzados y reportes</li>
+            <li>Integración con redes sociales</li>
+            <li>Sistema de fidelización de clientes</li>
+          </ul>
+
+          <h3>🛠️ Scripts Disponibles</h3>
+          <div class="scripts-grid">
+            <div class="script-item">
+              <code>npm run dev</code>
+              <span>Desarrollo local</span>
+            </div>
+            <div class="script-item">
+              <code>npm run build</code>
+              <span>Construcción para producción</span>
+            </div>
+            <div class="script-item">
+              <code>npm start</code>
+              <span>Inicio en producción</span>
+            </div>
+            <div class="script-item">
+              <code>npm run lint</code>
+              <span>Análisis de código</span>
+            </div>
+          </div>
+
+          <div class="article-footer">
+            <a href="#blog" class="back-to-blog" data-back-to="blog">← Volver al Blog</a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- PROYECTOS -->
@@ -367,9 +1497,112 @@
             <h3>React / Next.js</h3>
           </div>
           <div class="progress-bar">
+            <div class="progress" data-level="85"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TypeScript">
+            <h3>TypeScript</h3>
+          </div>
+          <div class="progress-bar">
             <div class="progress" data-level="80"></div>
           </div>
           <p class="level">Intermedio-Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+              alt="Tailwind CSS">
+            <h3>Tailwind CSS</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="90"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            <h3>Node.js</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="80"></div>
+          </div>
+          <p class="level">Intermedio-Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL">
+            <h3>PostgreSQL</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="75"></div>
+          </div>
+          <p class="level">Intermedio</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+            <h3>Express.js</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="80"></div>
+          </div>
+          <p class="level">Intermedio-Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            <h3>Git & GitHub</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="85"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap">
+            <h3>Bootstrap</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="85"></div>
+          </div>
+          <p class="level">Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://supabase.com/images/brand/supabase-logo.svg" alt="Supabase">
+            <h3>Supabase</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="80"></div>
+          </div>
+          <p class="level">Intermedio-Avanzado</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <img src="https://resend.com/logo.svg" alt="Resend">
+            <h3>Resend</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-level="75"></div>
+          </div>
+          <p class="level">Intermedio</p>
         </div>
       </div>
     </section>
@@ -433,6 +1666,81 @@
           class="fa-brands fa-github"></i></a> </div>
   </footer>
   <script src="script.js"></script>
+
+  <script>
+    // Navegación del Blog
+    document.addEventListener('DOMContentLoaded', function () {
+      // Función para mostrar una sección y ocultar las demás
+      function showSection(sectionId) {
+        console.log('Mostrando sección:', sectionId);
+
+        // Ocultar todas las secciones
+        const allSections = document.querySelectorAll('.section');
+        allSections.forEach(section => {
+          section.style.display = 'none';
+          section.classList.remove('active');
+        });
+
+        // Mostrar la sección específica
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.style.display = 'block';
+          targetSection.classList.add('active');
+          console.log('Sección mostrada:', sectionId);
+        } else {
+          console.log('Sección no encontrada:', sectionId);
+        }
+      }
+
+      // Manejar clicks en los enlaces del blog
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.blog-link[data-article]')) {
+          e.preventDefault();
+          const articleType = e.target.closest('.blog-link').getAttribute('data-article');
+          const sectionId = 'blog-' + articleType;
+          showSection(sectionId);
+
+          // Actualizar la URL sin recargar la página
+          history.pushState({ section: sectionId }, '', '#' + sectionId);
+        }
+
+        // Manejar clicks en "Volver al Blog"
+        if (e.target.closest('.back-to-blog[data-back-to]')) {
+          e.preventDefault();
+          showSection('blog');
+
+          // Actualizar la URL
+          history.pushState({ section: 'blog' }, '', '#blog');
+        }
+      });
+
+      // Manejar navegación con el botón atrás del navegador
+      window.addEventListener('popstate', function (e) {
+        if (e.state && e.state.section) {
+          showSection(e.state.section);
+        } else {
+          showSection('blog');
+        }
+      });
+
+      // Verificar si hay un hash en la URL al cargar la página
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#blog-')) {
+        // Pequeño delay para asegurar que el DOM esté completamente cargado
+        setTimeout(() => {
+          showSection(hash.substring(1));
+        }, 100);
+      }
+
+      // También verificar cuando la página se carga completamente
+      window.addEventListener('load', function () {
+        const hashOnLoad = window.location.hash;
+        if (hashOnLoad && hashOnLoad.startsWith('#blog-')) {
+          showSection(hashOnLoad.substring(1));
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
