@@ -16,112 +16,188 @@
   <style>
     /* Estilos específicos para artículos del blog */
     .blog-article {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      background: linear-gradient(135deg, #2d1b69 0%, #3b0764 50%, #581c87 100%);
+      border-radius: 20px;
+      box-shadow:
+        0 30px 60px rgba(45, 27, 105, 0.4),
+        0 20px 40px rgba(59, 7, 100, 0.3),
+        0 10px 20px rgba(88, 28, 135, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
       line-height: 1.7;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-article::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(88, 28, 135, 0.5) 0%, transparent 70%),
+        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.4) 0%, transparent 70%),
+        radial-gradient(circle at 40% 40%, rgba(45, 27, 105, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 60% 70%, rgba(59, 7, 100, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 10% 30%, rgba(30, 27, 75, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .blog-article .article-container {
+      position: relative;
+      z-index: 2;
     }
 
     .article-header {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      border-bottom: 2px solid rgba(139, 92, 246, 0.4);
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+      backdrop-filter: blur(20px);
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 0 0 3rem 0;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(139, 92, 246, 0.1);
     }
 
     .article-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #1f2937;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .article-meta {
       display: flex;
       gap: 1rem;
       align-items: center;
-      color: #6b7280;
+      color: rgba(255, 255, 255, 0.9);
       font-size: 0.9rem;
     }
 
     .article-date {
-      background: #f3f4f6;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-weight: 500;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .article-tag {
-      background: #3b82f6;
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
       color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .github-stack-header {
+      margin-top: 1rem;
+    }
+
+    .github-stack-header .stack-badges {
+      gap: 0.4rem;
+    }
+
+    .github-stack-header .badge {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
     }
 
     .article-content {
-      color: #374151;
+      color: rgba(255, 255, 255, 0.95);
     }
 
     .article-content h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #1f2937;
-      margin: 2rem 0 1rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e5e7eb;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 2.5rem 0 1.5rem 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .article-content h4 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1f2937;
-      margin: 1.5rem 0 0.75rem 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.95);
+      margin: 2rem 0 1rem 0;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
 
     .article-content h5 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      color: #374151;
-      margin: 1rem 0 0.5rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 1.5rem 0 0.75rem 0;
     }
 
     .article-content p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.8;
     }
 
     .article-content ul,
     .article-content ol {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       padding-left: 2rem;
     }
 
     .article-content li {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
     }
 
     .article-content pre {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
       overflow-x: auto;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
-      line-height: 1.5;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .article-content code {
-      background: #f1f5f9;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
       font-size: 0.9rem;
-      color: #e11d48;
+      color: #fbbf24;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 500;
     }
 
     .features-grid {
@@ -132,22 +208,49 @@
     }
 
     .feature-card {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(45, 27, 105, 0.15) 100%);
+      pointer-events: none;
     }
 
     .feature-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(139, 92, 246, 0.4);
+      border-color: rgba(139, 92, 246, 0.5);
     }
 
     .feature-card h4 {
-      color: #1e40af;
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-card p {
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      z-index: 2;
     }
 
     .tech-stack {
@@ -158,16 +261,38 @@
     }
 
     .tech-category {
-      background: #f8fafc;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border-left: 4px solid #3b82f6;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 2rem;
+      border-left: 4px solid #8b5cf6;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      transition: all 0.3s ease;
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(139, 92, 246, 0.1);
+    }
+
+    .tech-category:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      border-color: rgba(139, 92, 246, 0.5);
     }
 
     .tech-category h4 {
-      color: #1e40af;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .tech-category ul {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .tech-category li {
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .user-features {
@@ -179,16 +304,36 @@
     .feature-item {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
-      background: #f8fafc;
-      padding: 1rem;
-      border-radius: 8px;
-      border-left: 4px solid #10b981;
+      gap: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid #8b5cf6;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateX(5px);
+      background: rgba(88, 28, 135, 0.3);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      border-color: rgba(139, 92, 246, 0.6);
     }
 
     .feature-item .icon {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .feature-item h5 {
+      color: #ffffff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-item p {
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .results-grid {
@@ -199,17 +344,53 @@
     }
 
     .result-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
       color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
+      padding: 2rem;
+      border-radius: 16px;
       text-align: center;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(139, 92, 246, 0.1);
+    }
+
+    .result-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #2d1b69 0%, #3b0764 50%, #581c87 100%);
+      opacity: 0.95;
+      z-index: -1;
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
     .result-card h4 {
       color: white;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .result-card p {
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
     }
 
     .scripts-grid {
@@ -247,18 +428,24 @@
     .back-to-blog {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: #3b82f6;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+      padding: 1rem 2rem;
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: 500;
-      transition: background 0.2s;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
     }
 
     .back-to-blog:hover {
-      background: #2563eb;
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
     }
 
     .article-intro {
@@ -274,17 +461,38 @@
     }
 
     .table-of-contents {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      border-radius: 16px;
+      padding: 2rem;
       margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(139, 92, 246, 0.1);
+    }
+
+    .table-of-contents::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(45, 27, 105, 0.15) 100%);
+      pointer-events: none;
     }
 
     .table-of-contents h4 {
-      color: #1e40af;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
     }
 
     .table-of-contents ul {
@@ -298,19 +506,203 @@
     }
 
     .table-of-contents a {
-      color: #374151;
+      color: rgba(255, 255, 255, 0.9);
       text-decoration: none;
-      padding: 0.5rem 0;
+      padding: 0.75rem 1rem;
       display: block;
-      border-radius: 6px;
-      padding-left: 0.75rem;
-      transition: all 0.2s;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
     }
 
     .table-of-contents a:hover {
-      background: #e0e7ff;
-      color: #1e40af;
-      transform: translateX(4px);
+      background: rgba(139, 92, 246, 0.3);
+      color: #ffffff;
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    }
+
+    /* GitHub Stack Badges */
+    .github-stack {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #0d1117;
+      border-radius: 12px;
+      border: 1px solid #30363d;
+    }
+
+    .stack-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      white-space: nowrap;
+    }
+
+    .badge-nextjs {
+      background-color: #374151;
+      color: #ffffff;
+    }
+
+    .badge-version {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .badge-typescript {
+      background-color: #374151;
+      color: #ffffff;
+    }
+
+    .badge-supabase {
+      background-color: #374151;
+      color: #ffffff;
+    }
+
+    .badge-database {
+      background-color: #16a34a;
+      color: #ffffff;
+    }
+
+    .badge-tailwind {
+      background-color: #374151;
+      color: #ffffff;
+    }
+
+    .badge-css {
+      background-color: #0891b2;
+      color: #ffffff;
+    }
+
+    .tech-details {
+      margin-top: 2rem;
+    }
+
+    /* Fondo de la sección del blog */
+    #blog {
+      background: linear-gradient(135deg, #0f0f23 0%, #1a0b2e 50%, #2d1b69 100%) !important;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #blog::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(45, 27, 105, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(88, 28, 135, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(30, 27, 75, 0.15) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #blog>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Artículos individuales del blog */
+    #blog-ia-proyectos,
+    #blog-cursor-ai,
+    #blog-devices-f2,
+    #blog-barberia {
+      background: linear-gradient(135deg, #0f0f23 0%, #1a0b2e 50%, #2d1b69 100%) !important;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #blog-ia-proyectos::before,
+    #blog-cursor-ai::before,
+    #blog-devices-f2::before,
+    #blog-barberia::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(45, 27, 105, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(88, 28, 135, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(30, 27, 75, 0.15) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #blog-ia-proyectos>*,
+    #blog-cursor-ai>*,
+    #blog-devices-f2>*,
+    #blog-barberia>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Botón CTA Personalizado */
+    .cta {
+      background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #000000 100%) !important;
+      color: #ffffff !important;
+      padding: 0.75rem 1.5rem !important;
+      border-radius: 12px !important;
+      font-weight: 600 !important;
+      font-size: 0.9rem !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #8b5cf6 !important;
+      box-shadow:
+        0 4px 15px rgba(139, 92, 246, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .cta:hover {
+      background: linear-gradient(135deg, #374151 0%, #1f2937 50%, #111827 100%) !important;
+      border-color: #a855f7 !important;
+      transform: translateY(-2px) !important;
+      box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.5),
+        0 4px 15px rgba(168, 85, 247, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .cta:hover::before {
+      left: 100%;
+    }
+
+    .cta:active {
+      transform: translateY(0) !important;
+      box-shadow:
+        0 2px 10px rgba(139, 92, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
     }
 
     /* Responsive */
@@ -329,6 +721,15 @@
       .results-grid {
         grid-template-columns: 1fr;
       }
+
+      .stack-badges {
+        justify-content: center;
+      }
+
+      .badge {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+      }
     }
   </style>
 </head>
@@ -341,7 +742,7 @@
       const hash = window.location.hash;
       console.log('Hash detectado:', hash);
 
-      if (hash && hash.startsWith('#blog-')) {
+      if (hash) {
         const sectionId = hash.substring(1);
         console.log('Mostrando sección:', sectionId);
 
@@ -357,6 +758,15 @@
           targetSection.style.display = 'block';
           targetSection.classList.add('active');
           console.log('Sección mostrada:', sectionId);
+
+          // Actualizar navbar activo
+          document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('active');
+          });
+          const activeLink = document.querySelector(`a[data-section="${sectionId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
         } else {
           console.log('Sección no encontrada:', sectionId);
         }
@@ -1171,6 +1581,19 @@ xl: '1280px'  // Desktops</code></pre>
             <span class="article-date">Septiembre 2025</span>
             <span class="article-tag">Full-Stack</span>
           </div>
+
+          <div class="github-stack-header">
+            <div class="stack-badges">
+              <span class="badge badge-nextjs">Next.js</span>
+              <span class="badge badge-version">13.5.6</span>
+              <span class="badge badge-typescript">TypeScript</span>
+              <span class="badge badge-version">5.0</span>
+              <span class="badge badge-supabase">Supabase</span>
+              <span class="badge badge-database">Database</span>
+              <span class="badge badge-tailwind">Tailwind</span>
+              <span class="badge badge-css">CSS</span>
+            </div>
+          </div>
         </div>
 
         <div class="article-content">
@@ -1223,12 +1646,26 @@ xl: '1280px'  // Desktops</code></pre>
           </div>
 
           <h3 id="stack-tecnologico">🛠️ Stack Tecnológico</h3>
-          <div class="tech-stack">
+
+          <div class="github-stack">
+            <div class="stack-badges">
+              <span class="badge badge-nextjs">Next.js</span>
+              <span class="badge badge-version">13.5.6</span>
+              <span class="badge badge-typescript">TypeScript</span>
+              <span class="badge badge-version">5.0</span>
+              <span class="badge badge-supabase">Supabase</span>
+              <span class="badge badge-database">Database</span>
+              <span class="badge badge-tailwind">Tailwind</span>
+              <span class="badge badge-css">CSS</span>
+            </div>
+          </div>
+
+          <div class="tech-details">
             <div class="tech-category">
               <h4>Frontend</h4>
               <ul>
-                <li><strong>Next.js:</strong> Framework de React para aplicaciones web</li>
-                <li><strong>TypeScript:</strong> Superset de JavaScript con tipado estático</li>
+                <li><strong>Next.js 13.5.6:</strong> Framework de React para aplicaciones web</li>
+                <li><strong>TypeScript 5.0:</strong> Superset de JavaScript con tipado estático</li>
                 <li><strong>Tailwind CSS:</strong> Framework CSS utility-first para diseño moderno</li>
                 <li><strong>React:</strong> Biblioteca de interfaz de usuario</li>
               </ul>
@@ -1687,10 +2124,41 @@ docker run -p 3000:3000 --env-file .env.local blessed-studio-barberia</code></pr
           targetSection.style.display = 'block';
           targetSection.classList.add('active');
           console.log('Sección mostrada:', sectionId);
+
+          // Actualizar URL sin recargar la página
+          if (history.pushState) {
+            history.pushState(null, null, '#' + sectionId);
+          }
         } else {
           console.log('Sección no encontrada:', sectionId);
         }
+
+        // Actualizar navbar activo
+        updateActiveNav(sectionId);
       }
+
+      // Función para actualizar el navbar activo
+      function updateActiveNav(sectionId) {
+        // Remover clase activa de todos los enlaces
+        document.querySelectorAll('nav a').forEach(link => {
+          link.classList.remove('active');
+        });
+
+        // Agregar clase activa al enlace correspondiente
+        const activeLink = document.querySelector(`a[data-section="${sectionId}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+
+      // Manejar clicks en el navbar principal
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('a[data-section]')) {
+          e.preventDefault();
+          const sectionId = e.target.closest('a[data-section]').dataset.section;
+          showSection(sectionId);
+        }
+      });
 
       // Manejar clicks en los enlaces del blog
       document.addEventListener('click', function (e) {
